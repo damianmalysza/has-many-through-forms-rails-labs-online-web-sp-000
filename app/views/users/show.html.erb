@@ -1,1 +1,6 @@
+<h1><%=@user.username%></h1>
 
+Posts that <%=@user.username%> has commented on:
+<% @user.comments.each do |comment| %>
+  <a href="<%=post_path(comment.post)%>"><%=comment.post.title%></a>
+<% end %>
